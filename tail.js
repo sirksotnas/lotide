@@ -6,8 +6,8 @@ const assertEqual = function(actualNumber, expectedNumber) {
   }
 };
 
-const tail = function (actualNumber) {
-  return actualNumber.slice(1)
+const tail = function(actualNumber) {
+  return actualNumber.slice(1);
 };
 
 const result = tail(["Hello", "Lighthouse", "Labs"]);
