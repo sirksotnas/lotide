@@ -1,10 +1,14 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅Assertion Passed: ${actual} === ${expected}`);
-  } else console.log(`🛑🛑🛑Assertion Failed: ${actual} !=== ${expected}`);
+const assertEqual = function(actualNumber, expectedNumber) {
+  if (actualNumber !== expectedNumber) {
+    console.log((`🛑Assertion Failed: ${actualNumber} !== ${expectedNumber}`));
+  } else {
+    console.log((`✅Assertion Passed: ${actualNumber} === ${expectedNumber}`));
+  }
 };
-const tail = function(arr) {
-  return arr.slice(1);
+
+const tail = function (actualNumber) {
+  return actualNumber.slice(1)
 };
+
 const result = tail(["Hello", "Lighthouse", "Labs"]);
 assertEqual(result, ["Lighthouse", "Labs"]); // => will always fail!
