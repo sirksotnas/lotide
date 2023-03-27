@@ -6,8 +6,8 @@ const assertEqual = function(actualNumber, expectedNumber) {
   }
 };
 
-const tail = function(actualNumber) {
-  return actualNumber.slice(1);
+const tail = function(actualNumber) {          // function helper name tail to return the array without the first element
+  return actualNumber.slice(1);                // used slice method to remove the first index of the array
 };
 
 const result = tail(["Hello", "Lighthouse", "Labs"]);
