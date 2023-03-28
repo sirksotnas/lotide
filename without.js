@@ -21,7 +21,7 @@ const without = function(source, itemsToRemove) {                      // functi
   let results = [];                                                    // buffer to store the unwated elemets
   for (let index = 0; index < source.length; index++) {                // loop through the given arrays in without arguements
     if (source[index] !== itemsToRemove[index]) {                      // conditional statement that detemine which element is not equal to the each array
-      results.push(source[index])                                      // using push methode to store the source array's unwated elements
+      results.push(source[index])                                      // using push method to store the source array's unwated elements
     }
   }  
   return results;                                                      // return the results to end the function
