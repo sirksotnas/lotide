@@ -7,10 +7,10 @@ const assertEqual = function(actualNumber, expectedNumber) {
 };
 
 const eqArrays = function(array1, array2) {                           // helper function name eqArrays that determine if array value is equal
-  if (array1.length !== array2.length)                                // conditional statement to determine if eqArray index are the same   
-  return false                                                        // sad(falsy) path 
+  if (array1.length !== array2.length)                                // conditional statement to determine if eqArray index are the same
+    return false;                                                     // sad(falsy) path
   for (let index = 0; index < array1.length; index++) {               // c-style loop to access each index of the array's parameter
-    if (array1[index] !== array2[index]) {                            // conditional statement to determine if eqArrays parameter value is not equal 
+    if (array1[index] !== array2[index]) {                            // conditional statement to determine if eqArrays parameter value is not equal
       return false;                                                   // sad(falsy) path
     }
   }
