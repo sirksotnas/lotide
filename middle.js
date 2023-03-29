@@ -24,7 +24,7 @@ const middle = function(array) {                                       // functi
     return [];
   }
   if (array.length % 2 === 0) {                                        // conditional statement that determine if an array has even number which returns 2 middle
-    results = array.slice(middleArray - 1, middleArray + 1);
+    results = array.slice(middleArray - 1, middleArray + 1);           // using slice method to take out the last index and adding one to put two index for even number of elements
   } else {
     results.push(array[middleArray]);                                  // else statement that returns the middle of the array when its an odd number
   }
