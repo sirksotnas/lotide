@@ -19,7 +19,7 @@ const countLetters = function(sentence) {       // function countLetter that tak
       results[letter] = 1;
     }
   }
-  return results;
+  return results;                              // return the results to output the string and how many time it shows up in each index
 };
 console.log(countLetters("lighthouse in the house"));
 const numOfLetters = countLetters("lighthouse in the house");
