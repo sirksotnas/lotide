@@ -16,39 +16,37 @@ const eqArrays = function(array1, array2) {
   return true;
 };
 
-// function that calling eqArrays to compare two arrays if they are the same
-const assertArraysEqual = function(array1, array2) {
-  // conditional statement that determines if eqArray is true or false
-  if (eqArrays(array1, array2)) {
-    // outputting string passed
-    console.log(`✅Assertion Passed: ${array1} === ${array2}`);
-    // outputting string failed
+const assertEqual = function(actualNumber, expectedNumber) {
+  if (actualNumber !== expectedNumber) {
+    console.log(`🛑Assertion Failed: ${actualNumber} !== ${expectedNumber}`);
   } else {
-    console.log(`🛑Assertion Failed: ${array1} !== ${array2}`);
+    console.log(`✅Assertion Passed: ${actualNumber} === ${expectedNumber}`);
   }
 };
 
 // Returns true if both objects have identical keys with identical values.
 // Otherwise you get back a big fat false!
 const eqObjects = function(object1, object2) {
-  const keys1 = Object.keys(object1);
-  const keys2 = Object.keys(object2);
+  const keyOfObject1 = Object.keys(object1);
+  const keyOfObject2 = Object.keys(object2);
   // if the number of keys in object1 is not equal to the number of keys in object2
-  if (keys1.length !== keys2.length) {
+  if (keyOfObject1.length !== keyOfObject2.length) {
     // return false
     return false;
   }
   // loop through each key in objects
-  for (const key of keys1) {
-    // if value of object1 at current key is not an array AND value of object2 at current key is not an array
-    if (!Array.isArray(object1[key]) && !Array.isArray(object2[key]))
-    // if eqObjects function called with value of object1 at current key and value of object2 at current key as arguments
-      if (!eqObjects(object1[key], object2[key])) {
-        //return false
+  for (let key of keyOfObject1) {
+    const valueOfObject1 = object1[key];
+    const valueOfObject2 = object2[key];
+    // if value of object1 is and array and value of object2 pass it onto eqArrays
+    if (Array.isArray(valueOfObject1) && Array.isArray(valueOfObject2)) {
+      // if both are not of equal value
+      if (!eqArrays(valueOfObject1, valueOfObject2)) {
+        // return false
         return false;
       }
-    // if value of object1 at current key is not equal to value of object2 at current key  
-    if (object1[key] !== object2[key]) {
+      // else if value of object1 at current key is not equal to value of object2 at current key
+    } else if (valueOfObject1 !== valueOfObject2) {
       // return false
       return false;
     }
@@ -60,17 +58,17 @@ const eqObjects = function(object1, object2) {
 const shirtObject = { color: "red", size: "medium" };
 const anotherShirtObject = { size: "medium", color: "red" };
 console.log(eqObjects(shirtObject, anotherShirtObject)); // => true
-assertArraysEqual(eqObjects(shirtObject, anotherShirtObject), true);
+assertEqual(eqObjects(shirtObject, anotherShirtObject), true);
 
 const longSleeveShirtObject = { size: "medium", color: "red", sleeveLength: "long" };
 console.log(eqObjects(shirtObject, longSleeveShirtObject)); // => false
-assertArraysEqual(eqObjects(shirtObject, longSleeveShirtObject), false);
+assertEqual(eqObjects(shirtObject, longSleeveShirtObject), false);
 
 const multiColorShirtObject = { colors: ["red", "blue"], size: "medium" };
 const anotherMultiColorShirtObject = { size: "medium", colors: ["red", "blue"] };
 console.log(eqObjects(multiColorShirtObject, anotherMultiColorShirtObject)); // => true
-assertArraysEqual(eqObjects(multiColorShirtObject, anotherMultiColorShirtObject), true);
+assertEqual(eqObjects(multiColorShirtObject, anotherMultiColorShirtObject), true);
 
 const longSleeveMultiColorShirtObject = { size: "medium", colors: ["red", "blue"], sleeveLength: "long" };
 console.log(eqObjects(multiColorShirtObject, longSleeveMultiColorShirtObject)); // => false
-assertArraysEqual(eqObjects(multiColorShirtObject, longSleeveMultiColorShirtObject), false);
+assertEqual(eqObjects(multiColorShirtObject, longSleeveMultiColorShirtObject), false);
