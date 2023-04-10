@@ -34,13 +34,14 @@ const takeUntil = function(array, callback) {
   const results = [];
   // loop through each element of the array
   for (let element of array) {
-    // if the resutls of callback with element arguement is true
-    if (callback(element)) {
-      // break out of the loop
+    // if the resutls of callback with element arguement is false
+    if (!callback(element)) {
+      // push each element to results
+      results.push(element);
+      // otherwise break out of the loop if its true
+    } else {
       break;
     }
-    // otherwise push each element to results until the callback function is true
-    results.push(element);
   }
   // return results
   return results;
