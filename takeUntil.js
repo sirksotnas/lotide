@@ -38,7 +38,7 @@ const takeUntil = function(array, callback) {
     if (!callback(element)) {
       // push each element to results
       results.push(element);
-      // otherwise break out of the loop if its true
+      // otherwise break out of the loop if its true 
     } else {
       break;
     }
