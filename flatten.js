@@ -21,9 +21,9 @@ const flatten = function(array) {                                      // functi
   let results = [];                                                    // buffer to put the results of the merged array
   for (const item of array) {                                          // loop though the array
     if (Array.isArray(item)) {                                         // conditonal statement to check if the nested arrays are arrays
-      results = results.concat(flatten(item))                          // concatenate the array and setting it as the results
+      results = results.concat(flatten(item));                          // concatenate the array and setting it as the results
     } else {
-      results.push(item)                                               // else statement that push the in the buffer if the array is not nested array
+      results.push(item);                                               // else statement that push the in the buffer if the array is not nested array
     }
   }
   return results;

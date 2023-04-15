@@ -30,4 +30,4 @@ const results1 = findKey({
   "Akelarre": { stars: 3 }
 }, x => x.stars === 2);
 console.log(results1);
-assertEqual(results1, "noma")
+assertEqual(results1, "noma");

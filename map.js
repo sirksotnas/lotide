@@ -29,25 +29,27 @@ const assertArraysEqual = function(array1, array2) {
 };
 
 // Intialize an array
-const numbers = [1, 2, 3]
+const numbers = [1, 2, 3];
 const words = ["ground", "control", "to", "major", "tom"];
 // create a function name map that return a new array based on the results of the callback function
-const map = function (array, callback) {
+const map = function(array, callback) {
   // create an empty array to store the results of callback function
   const results = [];
-  // loop through each element in the array 
+  // loop through each element in the array
   for (let item of array) {
-    // call the function on each element and push the results in the empty array 
+    // call the function on each element and push the results in the empty array
     results.push(callback(item));
   }
   // return the result array
   return results;
-}
+};
 // call the map function on words array and a callback function that returns the first element of each word
 const results1 = map(words, word => word[0]);
 console.log(results1);
-const results2 = map(numbers, number => { return number * 2})
+const results2 = map(numbers, number => {
+  return number * 2;
+});
 
-assertArraysEqual(results1, ["g", "c", "t", "m", "t"])
-assertArraysEqual(results2, [2, 4, 6])
-assertArraysEqual(words, ["ground", "control", "to", "major", "tom"])
+assertArraysEqual(results1, ["g", "c", "t", "m", "t"]);
+assertArraysEqual(results2, [2, 4, 6]);
+assertArraysEqual(words, ["ground", "control", "to", "major", "tom"]);
