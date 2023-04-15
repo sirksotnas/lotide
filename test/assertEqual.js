@@ -1,14 +1,13 @@
-// FUNCTION IMPLEMENTATION
+// function called assertEqual that compares two arguments  
 const assertEqual = function(actualNumber, expectedNumber) {
+  // if the two arguements are not equal
   if (actualNumber !== expectedNumber) {
+    // print assert failed 
     console.log(`🛑Assertion Failed: ${actualNumber} !== ${expectedNumber}`);
   } else {
+    // otherwise print assert passed
     console.log(`✅Assertion Passed: ${actualNumber} === ${expectedNumber}`);
   }
 };
-
-// TEST CODE
-assertEqual("Lighthouse Labs", "Bootcamp");
-assertEqual("Lighthouse Labs", "Lighthouse Labs");
-assertEqual(1, 2);
-assertEqual(1, 1);
+// export the function
+module.exports = assertEqual;
