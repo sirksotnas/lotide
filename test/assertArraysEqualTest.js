@@ -1,5 +1,5 @@
 // import assertArraysEqual function
-const assertArraysEqual = require("./assertArraysEqual");
+const assertArraysEqual = require("../assertArraysEqual");
 
 // TEST CODE
 assertArraysEqual([], []); // => true

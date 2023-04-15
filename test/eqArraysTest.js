@@ -1,7 +1,7 @@
 // import assertEqual function
-const assertEqual = require("./assertEqual");
+const assertEqual = require("../assertEqual");
 // import eqArrays function
-const eqArrays = require("./eqArrays");
+const eqArrays = require("../eqArrays");
 
 // TEST CODE
 console.log(eqArrays([], []));
