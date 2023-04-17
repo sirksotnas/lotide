@@ -3,7 +3,7 @@ const flatten = function(array) {
   // buffer to put the results of the merged array
   let results = [];
   // loop though the array
-  for (const item of array) {
+  array.forEach((item) => {
     // conditonal statement to check if the nested arrays are arrays
     if (Array.isArray(item)) {
       // concatenate the array and setting it as the results
@@ -12,7 +12,7 @@ const flatten = function(array) {
     } else {
       results.push(item);
     }
-  }
+  });
   // return results to end the loop
   return results;
 };
