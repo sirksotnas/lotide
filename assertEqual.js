@@ -9,5 +9,5 @@ const assertEqual = function(actualNumber, expectedNumber) {
     console.log(`✅Assertion Passed: ${actualNumber} === ${expectedNumber}`);
   }
 };
-// export the function
+// export the assertEqual function
 module.exports = assertEqual;

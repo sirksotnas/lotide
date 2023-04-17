@@ -1,31 +1,7 @@
-// helper function name eqArrays that determine if array value is equal
-const eqArrays = function(array1, array2) {
-  // conditional statement to determine if eqArray index are the same
-  if (array1.length !== array2.length)
-    // sad(falsy) path return as false
-    return false;
-  // c-style loop to access each index of the array's parameter
-  for (let index = 0; index < array1.length; index++) {
-    // conditional statement to determine if eqArrays parameter value is not equal
-    if (array1[index] !== array2[index]) {
-      // sad(falsy) path return as false
-      return false;
-    }
-  }
-  // happy(truthy) path return as true
-  return true;
-};
+// import eqArrays fucntion
+const eqArrays = require("./eqArrays");
 
-const assertEqual = function(actualNumber, expectedNumber) {
-  if (actualNumber !== expectedNumber) {
-    console.log(`🛑Assertion Failed: ${actualNumber} !== ${expectedNumber}`);
-  } else {
-    console.log(`✅Assertion Passed: ${actualNumber} === ${expectedNumber}`);
-  }
-};
-
-// Returns true if both objects have identical keys with identical values.
-// Otherwise you get back a big fat false!
+// function called eqObjects that returns true if both objects have identical keys with identical values. Otherwise you get back a big fat false!
 const eqObjects = function(object1, object2) {
   const keyOfObject1 = Object.keys(object1);
   const keyOfObject2 = Object.keys(object2);
@@ -55,20 +31,5 @@ const eqObjects = function(object1, object2) {
   return true;
 };
 
-const shirtObject = { color: "red", size: "medium" };
-const anotherShirtObject = { size: "medium", color: "red" };
-console.log(eqObjects(shirtObject, anotherShirtObject)); // => true
-assertEqual(eqObjects(shirtObject, anotherShirtObject), true);
-
-const longSleeveShirtObject = { size: "medium", color: "red", sleeveLength: "long" };
-console.log(eqObjects(shirtObject, longSleeveShirtObject)); // => false
-assertEqual(eqObjects(shirtObject, longSleeveShirtObject), false);
-
-const multiColorShirtObject = { colors: ["red", "blue"], size: "medium" };
-const anotherMultiColorShirtObject = { size: "medium", colors: ["red", "blue"] };
-console.log(eqObjects(multiColorShirtObject, anotherMultiColorShirtObject)); // => true
-assertEqual(eqObjects(multiColorShirtObject, anotherMultiColorShirtObject), true);
-
-const longSleeveMultiColorShirtObject = { size: "medium", colors: ["red", "blue"], sleeveLength: "long" };
-console.log(eqObjects(multiColorShirtObject, longSleeveMultiColorShirtObject)); // => false
-assertEqual(eqObjects(multiColorShirtObject, longSleeveMultiColorShirtObject), false);
+// export eqObjects function
+module.exports = eqObjects;

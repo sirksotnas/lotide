@@ -3,4 +3,5 @@ const head = function(actualNumber) {
   return actualNumber[0];
 };
 
+// export head function
 module.exports = head;

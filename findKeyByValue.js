@@ -1,11 +1,3 @@
-const assertEqual = function(actualNumber, expectedNumber) {
-  if (actualNumber !== expectedNumber) {
-    console.log(`🛑Assertion Failed: ${actualNumber} !== ${expectedNumber}`);
-  } else {
-    console.log(`✅Assertion Passed: ${actualNumber} === ${expectedNumber}`);
-  }
-};
-
 // function name findKeyByValue that determine if the value of the current pair is equal to the given value
 const findKeyByValue = function(bestTVShowsByGenre, tvShows) {
   // loop through the given object using for in.. method
@@ -20,14 +12,5 @@ const findKeyByValue = function(bestTVShowsByGenre, tvShows) {
   return undefined;
 };
 
-const bestTVShowsByGenre = {
-  sciFi: "The Expanse",
-  comedy: "Brooklyn Nine-Nine",
-  drama:  "The Wire"
-};
-
-assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"),
-  "drama");
-assertEqual(findKeyByValue(bestTVShowsByGenre, "Brooklyn Nine-Nine"),
-  "sciFi");
-assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
+// export findKeyByValue function
+module.exports = findKeyByValue;
