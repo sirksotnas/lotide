@@ -6,8 +6,15 @@ const eqArrays = function(array1, array2) {
     return false;
   // c-style loop to access each index of the array's parameter
   for (let index = 0; index < array1.length; index++) {
-    // if array1 and array2 value is not equal
-    if (array1[index] !== array2[index]) {
+    // if element is an array
+    if (Array.isArray(array1[index]) && Array.isArray(array2[index])) {
+      // if calling eqArrays with value of array1 and array2 as an arguement is not true
+      if (!eqArrays(array1[index], array2[index])) {
+        // return false
+        return false;
+      }
+      // if array1 and array2 value is not equal
+    } else if (array1[index] !== array2[index]) {
       // sad(falsy) path return as false
       return false;
     }
