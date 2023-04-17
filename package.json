@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@krissantos101/lotide",
   "version": "1.0.0",
-  "description": "lotide project",
+  "description": "Lotide Project: collection of functions designed for working with JavaScript objects, arrays, strings, etc.",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
