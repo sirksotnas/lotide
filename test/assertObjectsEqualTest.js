@@ -1,7 +1,7 @@
 //import eqObjects function
-const eqObjects = require("../eqObjects")
+const eqObjects = require("../eqObjects");
 //import assertObjectsEqual function
-const assertObjectsEqual = require("../assertObjectsEqual")
+const assertObjectsEqual = require("../assertObjectsEqual");
 
 const shirtObject = { color: "red", size: "medium" };
 const anotherShirtObject = { size: "medium", color: "red" };
