@@ -4,7 +4,7 @@ const flatten = function(array) {
   let results = [];
   // loop though the array
   array.forEach((item) => {
-    // conditonal statement to check if the nested arrays are arrays
+    // if the nested arrays is an array 
     if (Array.isArray(item)) {
       // concatenate the array and setting it as the results
       results = results.concat(flatten(item));
