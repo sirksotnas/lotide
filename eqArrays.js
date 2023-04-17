@@ -22,5 +22,6 @@ const eqArrays = function(array1, array2) {
   // happy(truthy) path return as true
   return true;
 };
+
 // export eqArrays function
 module.exports = eqArrays;
