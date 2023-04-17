@@ -21,6 +21,10 @@ const eqObjects = function(object1, object2) {
         // return false
         return false;
       }
+    } else if (typeof valueOfObject1 === 'object' && typeof valueOfObject2 === 'object') {
+      if (!eqObjects(valueOfObject1, valueOfObject2)) {
+        return false;
+      }
       // else if value of object1 at current key is not equal to value of object2 at current key
     } else if (valueOfObject1 !== valueOfObject2) {
       // return false
