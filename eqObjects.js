@@ -25,7 +25,7 @@ const eqObjects = function(object1, object2) {
     } else if (typeof valueOfObject1 === 'object' && typeof valueOfObject2 === 'object') {
       // if value of object1 and object2 is not an array
       if (!Array.isArray(valueOfObject1) && !Array.isArray(valueOfObject2)) {
-        // if calling eqObjects with value of object1 and object2 is not true
+        // if calling eqObjects with value of object1 and object2 as anarguement is not true
         if (!eqObjects(valueOfObject1, valueOfObject2)) {
           // return false
           return false;
