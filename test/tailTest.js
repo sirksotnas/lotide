@@ -3,7 +3,15 @@ const assert = require("chai").assert;
 // import tail function
 const tail = require("../tail");
 
-// TEST CODE
+/* TEST CODE
+const tail = require('../tail');
+const assertEqual = require('../assertEqual');
+const result = tail(["Hello", "Lighthouse", "Labs"]);
+assertEqual(result, ["Lighthouse", "Labs"]);
+const words = ["Yo Yo", "Lighthouse", "Labs"];
+tail(words);
+assertEqual(words.length, 3);
+*/
 
 // describe tail function using describe function
 describe("tail function", () => {
@@ -13,7 +21,7 @@ describe("tail function", () => {
     assert.deepEqual(tail(["Hello", "Lighthouse", "Labs"]), ["Lighthouse", "Labs"]);
   });
   // check the length of array remains unchaged using assert.deepEqual method
-  it("should return new array and not modify the original array", () => {
+  it("returns new array and not modify the original array", () => {
     const words = ["Yo Yo", "Lighthouse", "Labs"];
     tail(words);
     assert.deepEqual(words.length, 3);
