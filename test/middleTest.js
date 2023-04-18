@@ -4,7 +4,6 @@ const assert = require("chai").assert;
 const middle = require("../middle");
 
 // TEST CODE
-
 // describe middle function using describe function
 describe("middle function", () => {
   // it function used to specify a test case for tail function
