@@ -1,8 +1,17 @@
-// import assertEqual function
-const assertEqual = require("../assertEqual");
-// import countLetters function
+// import assert library from chai package
+const assert = require("chai").assert;
+// imports countLetters function
 const countLetters = require("../countLetters");
 
-console.log(countLetters("lighthouse in the house"));
-const numOfLetters = countLetters("lighthouse in the house");
-assertEqual(numOfLetters["l"], 1);
+// TEST CODE
+// console.log(countLetters("lighthouse in the house"));
+// const numOfLetters = countLetters("lighthouse in the house");
+// assertEqual(numOfLetters["l"], 1);
+
+// describe countLetters function with describe function
+describe("countLetters function", () => {
+  it("returns the count of each letter in the string", () => {
+    const numOfLetters = countLetters("lighthouse in the house");
+    assert.deepEqual(numOfLetters["l"], 1);
+  });
+});
