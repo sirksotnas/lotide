@@ -3,7 +3,12 @@ const assert = require("chai").assert;
 // import head function from head module
 const head = require("../head");
 
-// TEST CODE
+/* TEST CODE
+const assertEqual = require('../assertEqual');
+const head = require('../head');
+assertEqual(head([5,6,7]), 5); // passed!
+assertEqual(head(["Hello", "Lighthosue", "Labs"]), "Hello");  // passed!
+ */
 
 // describe head function using describe function
 describe("head function", () => {
