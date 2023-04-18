@@ -26,11 +26,11 @@ describe("eqObjects function", () => {
   it("returns true for objects with same elements and different or same order", () => {
     const shirtObject = { color: "red", size: "medium" };
     const anotherShirtObject = { size: "medium", color: "red" };
-    assert.deepEqual(eqObjects(shirtObject, anotherShirtObject), true)
+    assert.deepEqual(eqObjects(shirtObject, anotherShirtObject), true);
   });
   it("returns true for object with same nested arrays", () => {
-    const multiColorShirtObject ={ colors: ["red", "blue"], size: "medium" };
+    const multiColorShirtObject = { colors: ["red", "blue"], size: "medium" };
     const anotherMultiColorShirtObject = { size: "medium", colors: ["red", "blue"] };
-    assert.deepEqual(eqObjects(multiColorShirtObject, anotherMultiColorShirtObject), true)
+    assert.deepEqual(eqObjects(multiColorShirtObject, anotherMultiColorShirtObject), true);
   });
 });
