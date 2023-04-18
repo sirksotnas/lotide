@@ -8,7 +8,10 @@ const letterPositions = require('../letterPositions');
 // assertArraysEqual(letterPositions("lighthouse in the house").l, [1]);
 // assertArraysEqual(letterPositions("lighthouse in the house").h, [3, 5, 15, 18]);
 
+// describe letterPositions with describe function
 describe("letterPostions function", () => {
+  // it function used to specify a test case for letterPositions function
+  // compare letterPositions function output with expected output using assert.strictEqual method
   it("returns the index of each letter shown in the string", () => {
     assert.deepEqual(letterPositions("lighthouse in the house"), {
       l: [0],
