@@ -4,8 +4,8 @@ const without = function(source, itemsToRemove) {
   let results = [];
   // loop through the given arrays in without arguements
   for (let index = 0; index < source.length; index++) {
-    // conditional statement that detemine which element is not equal to the each array
-    if (source[index] !== itemsToRemove[index]) {
+    // if the source index is inside the itemsToRemove
+    if (!itemsToRemove.includes(source[index])) {
       // using push method to store the source array's unwated elements
       results.push(source[index]);
     }
